@@ -2,7 +2,6 @@ import types
 import MySQLdb
 
 def db_connect(config, override_kwargs=None, **kwargs):
-
 	if override_kwargs:
 		kwargs = override_kwargs
 
@@ -18,4 +17,10 @@ def db_connect(config, override_kwargs=None, **kwargs):
 	user = __get_field(config, "username")
 	passwd = __get_field(config, "password")
 	return MySQLdb.connect(host=host, db=db, user=user, passwd=passwd, **kwargs)
+
+def __get_field(config, field, default=''):
+	val = config.get(field, default)
+	if not val:
+		return default
+	return val
 
