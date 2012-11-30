@@ -1,5 +1,5 @@
 # vim:foldmethod=indent
-from schema_base import *
+from knewton.schema.base import *
 
 class SchemaVersion1(SchemaBase):
 	def __init__(self, conn):
