@@ -31,7 +31,7 @@ def execute(table_base, default, schema=None):
 	config = None
 	if options.config:
 		config = options.config
-	yf = fetch_knewton_config(default, config)
+	yf = fetch_config(default, config)
 	if schema:
 		yf['database']['database'] = schema
 	conn = db_connect(yf['database'])
