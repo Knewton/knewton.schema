@@ -1,35 +1,37 @@
-*.py[cod]
+# compiled code
+*.pyc
 
-# C extensions
-*.so
+# swap files
+*.swp
+*.swo
+*~
+*#
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
+# py.test artifacts
+__pycache__
 
-# Installer logs
-pip-log.txt
+# log files
+*.log
 
-# Unit test / coverage reports
+# coverage files
 .coverage
-.tox
-nosetests.xml
+htmlcov
 
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
+# ide files
+.komodoproject
+.komodotools
+.classpath
 .project
 .pydevproject
+.settings
+.idea
+*.iml
+*.ipr
+*.iws
+
+# build files
+target
+dist/
+k.config.egg-info/
+build/
+MANIFEST
